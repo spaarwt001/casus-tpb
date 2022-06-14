@@ -92,7 +92,6 @@ export default {
     document.querySelector(".header__menu ul").addEventListener('click', function(){
       if (screenWidth <= 600 && menuOpen == 1 ){
         navAnimation();
-        console.log('1')
       }   
     }); 
     }
