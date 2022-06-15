@@ -64,7 +64,7 @@ export default {
 
     var tlnav = gsap.timeline ({paused:true});
     tlnav.to(mobNav, {duration: 0.2, autoAlpha: 1, height:430, ease:'Power1.easeInOut'}, "-=0.1") 
-         .fromTo(mobNavLinks, {y:-20}, {duration: 0.28  , autoAlpha: 1, y:1, ease:'Power1.easeOut'}, 0)
+         .fromTo(mobNavLinks, {y:-20, autoAlpha: 0}, {duration: 0.28  , autoAlpha: 1, y:1, ease:'Power1.easeOut'}, 0)
          .to(hamburgerUpper, {duration: 0.3, attr: {d: "M8,2 L2,8"}, ease:'Power1.easeInOut'},0)
          .to(hamburgerMiddle, {duration: 0.3, attr: {d: "M8,8 L2,2"}, autoAlpha: 0, ease:'Power1.easeInOut'},0)
          .to(hamburgerLower, {duration: 0.3, attr: {d: "M8,8 L2,2"}, ease:'Power1.easeInOut'},0)
@@ -87,7 +87,7 @@ export default {
        }
 
     var screenWidth = window.innerWidth;   
-    // click outside menu to close
+    // click anywhere in menu to close
     var menuOpen = 1;
     document.querySelector(".header__menu ul").addEventListener('click', function(){
       if (screenWidth <= 600 && menuOpen == 1 ){
